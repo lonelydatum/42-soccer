@@ -228,6 +228,25 @@ sup {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 4%, transparent 52%);
 }
 
+svg.olg_logo {
+  width: 40px;
+  opacity: 0;
+  -webkit-transform: translate(8px, 158px);
+  -ms-transform: translate(8px, 158px);
+  transform: translate(8px, 158px);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+  position: absolute;
+}
+
+svg.olg_logo polygon.tri {
+  -webkit-transform-origin: 0 80px;
+  -ms-transform-origin: 0 80px;
+  transform-origin: 0 80px;
+}
+
 #legalBtn {
   -webkit-transform: translate(920px, 195px);
   -ms-transform: translate(920px, 195px);

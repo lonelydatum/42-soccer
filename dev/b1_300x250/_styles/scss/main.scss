@@ -1,0 +1,21 @@
+
+
+@import '../../../_common/styles/common.scss';
+
+
+
+#banner{	
+	width: 300px;
+	height: 250px;
+}
+
+
+svg.olg_logo{
+	width: 30px;
+	border: 1px solid green;
+	@include pos(120, 50);
+	polygon.tri{
+		transform-origin: 0 80px;
+	}
+}
+

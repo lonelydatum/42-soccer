@@ -1,4 +1,4 @@
-import {size, frameEnd, init, read} from '../../_common/js/common.js'
+import {size, frameEnd, init, read, olg_logo} from '../../_common/js/common.js'
 import {player} from '../../_common/js/striker.js'
 
 
@@ -14,6 +14,10 @@ function start(){
 	tl.from(".t1a", .15, {x:"-=150",opacity:0}, .8)
 	tl.from(".t1b", .01, {opacity:0}, `+=${read.a}`)
 	tl.add(frameEnd(), `+=${read.b}`)
+
+	tl.from(".legal", .2, {opacity:0}, "-=.5")
+
+	tl.add(olg_logo())
 
 }
 

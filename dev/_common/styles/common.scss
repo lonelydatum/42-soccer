@@ -162,3 +162,13 @@ sup{
 	
 
 }
+
+
+svg.olg_logo{
+	width: 40px;
+	opacity: 0;
+	@include pos(8, 158);
+	polygon.tri{
+		transform-origin: 0 80px;
+	}
+}

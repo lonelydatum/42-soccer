@@ -46,11 +46,28 @@ function init(id) {
 	return tl;
 }
 
+function olg_logo() {
+	var time = 2;
+
+	var tl = new TimelineMax();
+	tl.set("svg.olg_logo", { opacity: 1 });
+	tl.set(".tri", { skewX: 90, scaleY: 0 });
+	tl.set(".item", { y: "+=100", opacity: 0 });
+
+	tl.to(".tri", .3, { skewX: 0, scaleY: 1, ease: Circ.easeOut });
+
+	tl.to(".item1", time, { y: 0, opacity: 1, ease: Elastic.easeOut }, .3);
+	tl.to(".item2", time, { y: 0, opacity: 1, ease: Elastic.easeOut }, .6);
+	tl.to(".item3", time, { y: 0, opacity: 1, ease: Elastic.easeOut }, .9);
+	return tl;
+}
+
 exports.size = size;
 exports.frameEnd = frameEnd;
 exports.init = init;
 exports.read = read;
 exports.v2 = v2;
+exports.olg_logo = olg_logo;
 
 // export {init}
 
@@ -106,6 +123,10 @@ function start() {
 	tl.from(".t1a", .15, { x: "-=150", opacity: 0 }, .8);
 	tl.from(".t1b", .01, { opacity: 0 }, '+=' + _commonJsCommonJs.v2.a);
 	tl.add((0, _commonJsCommonJs.frameEnd)(), '+=' + _commonJsCommonJs.v2.b);
+
+	tl.from(".legal", .2, { opacity: 0 }, "-=.5");
+
+	tl.add((0, _commonJsCommonJs.olg_logo)());
 }
 
 start();
