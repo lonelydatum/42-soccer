@@ -13,7 +13,7 @@ function player(speed=1){
 		if(i!==total){
 			obj = {...obj, opacity:0}
 		}
-		console.log(percent);
+		// console.log(percent);
 		tl.to(`#player${i}`, .8*speed, obj, `start+=${percent}`)	
 	}
 	

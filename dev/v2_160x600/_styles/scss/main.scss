@@ -1,0 +1,49 @@
+
+
+@import '../../../_common/styles/common.scss';
+
+
+
+#legalBtn{	
+	@include pos(120, 554);
+	// opacity: 1;
+}
+
+.ill {
+	transform-origin: 80px 160px;
+}
+
+#banner{	
+	width: 160px;
+	height: 600px;
+}
+
+
+
+.bgGrad{
+	// height: 66px;
+	opacity: .5;
+}
+
+
+
+.player1{		
+	@include pos-scale-rotate(-90, 0, .5, 0);
+}
+
+.player2{		
+	// @include pos-scale-rotate(-40, 0, .5, 0);
+}
+
+
+
+.ball{	
+	// @include pos-scale-rotate(50, -15, .5, 0);
+}
+
+
+#legalContent{
+	font-size: 8px;
+	line-height: 13px;
+	padding: 8px;
+}

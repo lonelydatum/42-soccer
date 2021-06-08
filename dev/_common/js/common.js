@@ -5,6 +5,11 @@ const read = {
 	b:2
 }
 
+const v2 = {
+	a:0,
+	b:2
+}
+
 TweenLite.defaultEase = Power2.easeInOut
 
 function frameEnd(nudge){
@@ -38,5 +43,5 @@ function init(id){
 	return tl
 }
 
-export {size, frameEnd, init, read}
+export {size, frameEnd, init, read, v2}
 // export {init}

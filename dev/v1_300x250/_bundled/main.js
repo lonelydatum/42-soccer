@@ -11,6 +11,11 @@ var read = {
 	b: 2
 };
 
+var v2 = {
+	a: 0,
+	b: 2
+};
+
 TweenLite.defaultEase = Power2.easeInOut;
 
 function frameEnd(nudge) {
@@ -45,6 +50,7 @@ exports.size = size;
 exports.frameEnd = frameEnd;
 exports.init = init;
 exports.read = read;
+exports.v2 = v2;
 
 // export {init}
 
@@ -72,7 +78,7 @@ function player() {
 		if (i !== total) {
 			obj = _extends({}, obj, { opacity: 0 });
 		}
-		console.log(percent);
+		// console.log(percent);
 		tl.to("#player" + i, .8 * speed, obj, "start+=" + percent);
 	}
 
