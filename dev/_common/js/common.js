@@ -27,7 +27,9 @@ function frameEnd(nudge){
 	tl.to(".cta1", .01, {opacity:0}, "+=2.5")
 
 	// tl.add("end", {opacity:0}, "+=.2")
-	tl.from([".cta2", ".legal"], .2, {opacity:0}, "+=.2")
+	tl.from(".cta2", .2, {opacity:0}, "+=.2")
+
+	tl.from(".legal", .2, {opacity:0}, "+=.5")
 
 	
 	
