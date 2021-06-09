@@ -30,7 +30,9 @@ function frameEnd(nudge) {
 	tl.from(".t2", .01, { opacity: 0 }, "+=.3");
 	tl.from(".cta1", .01, { opacity: 0 }, "+=2");
 	tl.to(".cta1", .01, { opacity: 0 }, "+=2.5");
-	tl.from(".cta2", .2, { opacity: 0 }, "+=.2");
+
+	// tl.add("end", {opacity:0}, "+=.2")
+	tl.from([".cta2", ".legal"], .2, { opacity: 0 }, "+=.2");
 
 	return tl;
 }

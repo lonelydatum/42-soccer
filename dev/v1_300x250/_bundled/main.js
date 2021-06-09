@@ -30,7 +30,9 @@ function frameEnd(nudge) {
 	tl.from(".t2", .01, { opacity: 0 }, "+=.3");
 	tl.from(".cta1", .01, { opacity: 0 }, "+=2");
 	tl.to(".cta1", .01, { opacity: 0 }, "+=2.5");
-	tl.from(".cta2", .2, { opacity: 0 }, "+=.2");
+
+	// tl.add("end", {opacity:0}, "+=.2")
+	tl.from([".cta2", ".legal"], .2, { opacity: 0 }, "+=.2");
 
 	return tl;
 }
@@ -123,10 +125,6 @@ function start() {
 	tl.from(".t1a", .15, { x: "-=150", opacity: 0 }, .8);
 	tl.from(".t1b", .01, { opacity: 0 }, '+=' + _commonJsCommonJs.read.a);
 	tl.add((0, _commonJsCommonJs.frameEnd)(), '+=' + _commonJsCommonJs.read.b);
-
-	tl.from(".legal", .2, { opacity: 0 }, "-=.5");
-
-	tl.add((0, _commonJsCommonJs.olg_logo)());
 }
 
 start();

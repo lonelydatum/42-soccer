@@ -30,7 +30,9 @@ function frameEnd(nudge) {
 	tl.from(".t2", .01, { opacity: 0 }, "+=.3");
 	tl.from(".cta1", .01, { opacity: 0 }, "+=2");
 	tl.to(".cta1", .01, { opacity: 0 }, "+=2.5");
-	tl.from(".cta2", .2, { opacity: 0 }, "+=.2");
+
+	// tl.add("end", {opacity:0}, "+=.2")
+	tl.from([".cta2", ".legal"], .2, { opacity: 0 }, "+=.2");
 
 	return tl;
 }
@@ -74,59 +76,25 @@ exports.olg_logo = olg_logo;
 },{}],2:[function(require,module,exports){
 "use strict";
 
-Object.defineProperty(exports, "__esModule", {
-	value: true
-});
-
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
-function player() {
-	var speed = arguments.length <= 0 || arguments[0] === undefined ? 1 : arguments[0];
-
-	var tl = new TimelineMax();
-
-	tl.add("start", 0);
-	var total = 4;
-	// for(let i=total; i>0;i--){
-	for (var i = 1; i <= total; i++) {
-		var percent = i / total * .17;
-
-		var obj = { x: 0, y: 0, ease: Power4.easeOut };
-		if (i !== total) {
-			obj = _extends({}, obj, { opacity: 0 });
-		}
-		// console.log(percent);
-		tl.to("#player" + i, .8 * speed, obj, "start+=" + percent);
-	}
-
-	TweenLite.to(".ball", 1.2 * speed, { x: 0, y: 0, ease: Power4.easeOut, delay: .17 });
-	return tl;
-}
-
-exports.player = player;
-
-},{}],3:[function(require,module,exports){
-'use strict';
-
 var _commonJsCommonJs = require('../../_common/js/common.js');
-
-var _commonJsStrikerJs = require('../../_common/js/striker.js');
 
 function start() {
 
 	var tl = new TimelineMax();
 	tl.set(".frame2", { opacity: 1 });
 
-	tl.from(".phone", .5, { y: 50 });
+	tl.from(".phone", .4, { y: 50 });
 	tl.from(".ill", .3, { scale: 0 });
-	tl.from(".cta1", .3, { opacity: 0 });
+	tl.from(".cta1", .2, { opacity: 0 }, "+=.4");
+
+	tl.from([".legal"], .2, { opacity: 0 }, "+=.3");
 }
 
 start();
 
 module.exports = {};
 
-},{"../../_common/js/common.js":1,"../../_common/js/striker.js":2}]},{},[3])
+},{"../../_common/js/common.js":1}]},{},[2])
 
 
 //# sourceMappingURL=main.js.map
